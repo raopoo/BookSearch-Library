@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState, useEffect } from "react";
+import BookcaseImg from "./components/BookcaseImg";
+import SearchBar from "./components/SearchBar";
+import BookGrid from "./components/BookGrid/BookGrid";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    let [books, setBooks] = useState([]);
+ 
+
+    return (
+        <div className="App">
+            <BookcaseImg />
+            <SearchBar resultCallback = {setBooks} />
+            <BookGrid books={books} />
+        </div>
+    );
 }
 
 export default App;
