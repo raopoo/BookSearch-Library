@@ -6,17 +6,19 @@ const BookGrid = ({ books }) => {
 
     return (
         <div className={styles.booksDiv}>
-            {books.map((e, index) => {
-                return (
-                    <Card
-                        key={index}
-                        title={e.title}
-                        authors={e.authors}
-                        image={e.image}
-                        description={e.description}
-                    ></Card>
-                );
-            })}
+            <div className={styles.booksDiv__cardWrapper}>
+                {books.map((e, index) => {
+                    return (
+                        <Card
+                            key={index}
+                            title={e.title}
+                            authors={e.authors}
+                            image={e.image}
+                            description={e.description}
+                        ></Card>
+                    );
+                })}
+            </div>
         </div>
     );
 };

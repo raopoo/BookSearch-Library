@@ -17,11 +17,13 @@ const bookSearch = async (searchValue, callback) => {
   
     
     let booksArr = volArr.map((e) => {
+        let imageLink = ((e.imageLinks === undefined) ? "" : e.imageLinks.thumbnail);
+       
         const book = {
             title: e.title,
             authors: e.authors,
             description: e.description,
-            image: e.imageLinks.thumbnail,
+            image: imageLink,
         };
         return book
         //return searchArr;
@@ -48,7 +50,7 @@ const SearchBar = ({resultCallback }) => {
                  
                 <Button label="Search" clickHandler={() =>{
                     bookSearch(currentSearch, resultCallback);
-                    // setCurrentSearch("");
+                    setCurrentSearch("");
                 }}></Button>
             </div>
         </>

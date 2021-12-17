@@ -1,8 +1,24 @@
-.booksDiv{
-     margin: 20px;
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
+@import '../../Scss/media.scss';
+
+.booksDiv {
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100vw;
+
+    &__cardWrapper {
+        padding: 10px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+
+        @include phone{
+            grid-template-columns: 1fr;
+        }
+
+        @include tablet{
+            grid-template-columns: 1fr 1fr;
+           }
+    }
 }
