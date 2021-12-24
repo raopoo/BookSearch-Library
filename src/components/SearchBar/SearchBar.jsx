@@ -8,7 +8,7 @@ const bookSearch = async (searchValue, callback) => {
     const response = await fetch(url);
   
     const json = await response.json();
-    const items = await json.items;
+    const items = json.items;
   
     
     let volArr = items.map(e => (e.volumeInfo));

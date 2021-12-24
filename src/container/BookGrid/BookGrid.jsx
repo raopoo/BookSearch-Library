@@ -1,4 +1,4 @@
-import Card from "../Card";
+import BookCard from "../../components/BookCard";
 import styles from "./BookGrid.module.scss";
 
 const BookGrid = ({ books }) => {
@@ -9,13 +9,13 @@ const BookGrid = ({ books }) => {
             <div className={styles.booksDiv__cardWrapper}>
                 {books.map((e, index) => {
                     return (
-                        <Card
+                        <BookCard
                             key={index}
                             title={e.title}
                             authors={e.authors}
                             image={e.image}
                             description={e.description}
-                        ></Card>
+                        ></BookCard>
                     );
                 })}
             </div>

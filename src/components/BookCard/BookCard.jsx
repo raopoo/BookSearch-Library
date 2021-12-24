@@ -1,6 +1,6 @@
-import styles from './Card.module.scss';
+import styles from './BookCard.module.scss';
 
-const Card = ({title,authors,description,image}) => {
+const BookCard = ({title,authors,description,image}) => {
 
     return(
         <div className={styles.card}>
@@ -12,4 +12,4 @@ const Card = ({title,authors,description,image}) => {
     )
 }
 
-export default Card;
+export default BookCard;

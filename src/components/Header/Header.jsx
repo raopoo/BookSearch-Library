@@ -1,7 +1,7 @@
-import  "./BookcaseImg.scss";
+import  "./Header.scss";
 import shelf from "./book-shelf.jpg"
 
-const BookcaseImg = () => {
+const Header = () => {
     return (
         <div>
             <h1 className="heading">Welcome to my library</h1>
@@ -10,4 +10,4 @@ const BookcaseImg = () => {
     );
 };
 
-export default BookcaseImg;
+export default Header;
