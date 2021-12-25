@@ -11,8 +11,6 @@ function App() {
     return (
         <div className="App">
             <Header />
-            {/* <SearchBar resultCallback = {setBooks} />
-            <BookGrid books={books} /> */}
             <Books resultCallback = {setBooks} books={books} />
         </div>
     );
